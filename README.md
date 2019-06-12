@@ -1,4 +1,3 @@
 # Tutorial
 
-Css
-Git
+js
