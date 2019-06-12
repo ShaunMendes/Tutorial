@@ -1,5 +1,0 @@
-numbers(100:100:900) #represent how bold the font is
-normal
-bolder
-lighter #depends upon font family
-
