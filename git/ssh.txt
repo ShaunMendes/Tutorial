@@ -1,3 +1,8 @@
 To generate ssh key for github, open terminal and use following command:
 
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+to add ssh to your gitHub account
+
+sudo apt-get install xclip
+xclip -sel clip < ~/.ssh/id_rsa.pub
