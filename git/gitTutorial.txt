@@ -37,6 +37,7 @@ git merge <branchname> to merge branch with master
 git status for tracking changes to branch
 
 git remote add <aliasname> <reponame>
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git #to change remote url to ssh
 
 git push <reponame> <branchname> to push your project to remote repo
 
