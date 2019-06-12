@@ -1,4 +1,0 @@
-capitalize #title
-inherit
-lowercase
-uppercase

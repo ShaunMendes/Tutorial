@@ -1,5 +1,0 @@
-For browser support:
-link:https://caniuse.com/
-
-vendor-prefix code:
-link:http://pleeease.io/play/

@@ -1,4 +1,0 @@
-Mostly used when there is misalignment between block and inline level elements
-
-block #to change inline elements to block elements
-inline-block #for a mixture of both

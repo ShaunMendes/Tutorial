@@ -1,2 +1,0 @@
-to order the text in div into columns
-number

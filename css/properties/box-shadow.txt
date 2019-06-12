@@ -1,2 +1,0 @@
-box-shadow: horizontial veritcal blur-radius blur-distance color
-numbers
