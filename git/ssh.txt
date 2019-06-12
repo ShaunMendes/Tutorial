@@ -1,0 +1,3 @@
+To generate ssh key for github, open terminal and use following command:
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
