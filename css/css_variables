@@ -1,0 +1,11 @@
+:root{
+    --theme-color:#3de4de
+    --link-color:#sa2343
+}
+
+selector{
+    background:var(--theme-color)
+}
+
+for communication with js
+link:https://www.youtube.com/watch?v=2wcJRa2fhSc&list=PL4cUxeGkcC9ii5PB2UMyYH7QFZWfGnVgZ&index=4

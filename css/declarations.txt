@@ -1,0 +1,11 @@
+Absolute: px
+Relative: ems or %age
+Eg:
+parent_tag{
+    font-size:16px;
+}
+parent_tag child_tag{
+    font-size:3em;  3 times of parent font size
+}
+
+font-family:arial, halvetica, sans-serif (chose to adjacent font if the prev font is not installed)

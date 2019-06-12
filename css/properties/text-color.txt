@@ -1,0 +1,4 @@
+property-name: color #text color
+property-name: background #for background color
+
+background: url(imgUrl)

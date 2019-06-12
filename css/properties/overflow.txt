@@ -1,0 +1,4 @@
+auto #adds scroll bar
+hidden
+inherit
+visible(default)

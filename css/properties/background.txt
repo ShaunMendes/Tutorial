@@ -1,0 +1,27 @@
+background-color:number
+
+background-image:url(imgUrl)
+
+background-repeat:
+no-repeat #does not repeat the image through the entire div
+round #for neatness in repeat
+
+background-position:
+top
+left
+center
+left
+right
+
+background-size:number
+
+shorthand:
+background: url(imgUrl) no-repeat top center
+
+*put background-color property seperate always
+
+for multiple images:
+background-image: url(imgUrl), url(imgUrl);
+background-repeat:no-repeat, no-repeat;
+background-position:center, top left;
+background-size:300px, 100%;

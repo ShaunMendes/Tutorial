@@ -1,0 +1,3 @@
+adds text to a selector.
+
+Generally used with pseudo classes

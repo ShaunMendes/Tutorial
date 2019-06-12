@@ -1,0 +1,9 @@
+property-name: letter-spacing
+property-name: word-spacing
+property-name: line-height
+
+Eg:
+p{
+    font-size:14px;
+    line-height:2em; #takes 14px and multiples it by 2
+}

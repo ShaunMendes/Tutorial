@@ -1,0 +1,11 @@
+sets postion of selector
+
+always use with the following properties
+top
+bottom
+left
+right
+
+relative #offsets the element by left righ but keeps it in normal doc flow
+absolute #absolute remove element from normal element flow and positions the element anywhere on the screen relative to the parent element.
+fixed #positions elements fixed to the window

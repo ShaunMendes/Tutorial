@@ -1,0 +1,12 @@
+float:removes the element from the div and floats it, hence not occupying any height.
+link:https://youtu.be/VwxGKpvW8Zk?list=PL4cUxeGkcC9hudKGi5o5UiWuTAGbxiLTh&t=398
+
+clear:alerts the tag that a float elemet is present above it and hence forces border to start below float element
+
+right
+left
+top
+bottom
+
+
+

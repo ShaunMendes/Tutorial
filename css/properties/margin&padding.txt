@@ -1,0 +1,12 @@
+margin: top right bottom left;
+margin: top-bottom left-right;
+marginL: all-sides;
+
+margin_collapse:
+if the top and bottom margins are same then the margins collapse and cause same distance between both element.
+if the top and bottom margins are different then the margin with greater measure is taken.
+
+position element to center:
+margin: 30px auto;
+
+*same rules applies to padding
