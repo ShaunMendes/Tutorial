@@ -1,0 +1,4 @@
+translate(Xaxis, Yaxis) #move x y
+scale() #increase size along x y
+rotate() #rotate along x y
+

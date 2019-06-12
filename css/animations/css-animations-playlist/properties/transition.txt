@@ -1,0 +1,9 @@
+propertyToChange(optional) time(sec) delay(sec) type(linear, ease-in)
+comma seperate for multiple properties
+
+Eg:transition: background 1s, transform 2s
+
+linear: to keep effect constant
+ease-in: start slow and then get fast
+ease-out
+ease
