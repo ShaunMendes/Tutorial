@@ -1,0 +1,9 @@
+link:https://youtu.be/t2zoXRXpCWs?list=PL4cUxeGkcC9iGYgmEd2dm3zAKzyCGDtM5
+use to control the animation transition
+cubic-bezier(start,mid,fni) link:https://cubic-bezier.com/#.17,.67,.83,.67
+linear
+ease
+ease-in
+ease-out
+etc
+

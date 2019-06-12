@@ -1,0 +1,5 @@
+effect before and after animation
+
+foward: keep element at the to in keyframe
+backward: start element at the from in keyframe
+both: foward and backward

@@ -1,0 +1,3 @@
+reverse
+alternate-reverse
+normal

@@ -1,0 +1,2 @@
+number of times to repeat animation
+number/ infinite
