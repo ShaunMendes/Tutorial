@@ -5,7 +5,7 @@
 git config --global --edit to edit global git config
 git config credential.helper store to cache your username and password
 
-git add <filename> to add file to staging
+git add &ltfilename&lt to add file to staging
 git add . to add all changed files to staging
 
 git rm cached <filename> to remove file from staging
