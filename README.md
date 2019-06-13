@@ -18,11 +18,11 @@ Element(tag)
 !important is used to set that property globally and overrides all styles
 
 for immeditate children to get the styling:
-selector > tag{}
+\#selector > tag{}
 
 for adjacent tags to be styled:
 link:https://www.youtube.com/watch?v=K92X4yyyfNY&list=PL4cUxeGkcC9gQeDH6xYhmO-db2mhoTSrT&index=17
-selector pev tag + adjacent tag{}
+\#selector pev tag + adjacent tag{}
 
 styling tags with a particular attribute:
 link:https://www.youtube.com/watch?v=GVocONem9lw&list=PL4cUxeGkcC9gQeDH6xYhmO-db2mhoTSrT&index=18
