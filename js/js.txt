@@ -1,2 +1,0 @@
-Case Sensitive
-__proto__ contains all methods pertaining to that object
