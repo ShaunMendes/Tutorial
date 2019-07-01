@@ -1,0 +1,4 @@
+command: bc <expression>
+
+Eg:
+bc 2+3

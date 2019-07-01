@@ -1,0 +1,28 @@
+read <variable_name>
+
+-p which makes the text visible
+-s which makes the text invisible
+
+Eg:
+read -p 'Username: ' uservar
+read -sp 'Password: ' passvar
+
+read var1 var2 var3
+
+To read from stdin
+
+cat /dev/stdin
+
+Eg:
+
+#######################summary.sh##################
+
+cat /dev/stdin | cut -d' ' -f 2,3 | sort
+
+
+###################################################
+
+
+cat salesdata.txt | ./summary
+
+cat the file representing STDIN, cut setting the delimiter to a space, fields 2 and 3 then sort the output.

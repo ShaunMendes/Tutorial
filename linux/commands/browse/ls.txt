@@ -1,0 +1,6 @@
+commands: ls <options>
+lst all files in a directory
+
+options:
+-a : show hidden files too(hidden fikes begin with .)
+-l : long form, shows more information about files

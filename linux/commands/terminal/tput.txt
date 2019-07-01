@@ -1,0 +1,9 @@
+command: tput <option> color
+set color
+
+option:
+setaf: set foreground color
+sgr0: end tput
+
+
+note: enclose tput commands in \[ \] so as to prevent cursor issues 

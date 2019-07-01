@@ -1,0 +1,31 @@
+Double Paranthesis:
+$(( expression ))
+
+Eg:
+a=$(( 4 + 5 ))
+
+Length Of Variable:
+${#variable}
+
+Eg:
+b=4953
+echo ${#b} # 4
+
+let:
+let <arithmetic expression>
+
+Eg:
+let a=5+4
+let a++
+
+let always saves a result to variable
+
+Expr:
+expr <item1> operator <item2>
+
+Does not save result to variable
+
+Eg:
+expr 5 + 4
+a=$( expr 10 - 3 )
+

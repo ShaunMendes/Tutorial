@@ -1,0 +1,2 @@
+command: mkdir <foldername>
+to create new folder

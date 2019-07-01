@@ -1,0 +1,15 @@
+0 – no permission
+1 – execute
+2 – write
+3 – write and execute
+4 – read
+5 – read and execute
+6 – read and write
+7 – read, write, and execute
+
+What about the 3 digits ‘777’?
+first digit is assigned to the Owner,
+second digit is assigned to the Group
+third digit is assigned to the Others
+
+chmod 775 /path/to/file

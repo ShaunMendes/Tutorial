@@ -1,0 +1,7 @@
+command: rm <option> <file/folder_path>
+remove file from one dir to another
+note: file path with file name
+
+options:
+-R : recursive remove
+-f : force

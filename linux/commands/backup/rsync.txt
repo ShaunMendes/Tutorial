@@ -1,0 +1,19 @@
+command: rsync <options> source <dest>
+A fast, versatile, remote (and local) file-copying tool
+Used to sync 2 directories.
+It only copies files if missing at destination or modified and source
+
+option:
+-r: recursive copy subfolders
+-a: copies the files and folders with all permissions and ownerships
+--dry-run: shows the files that will be copied
+-v: verbose
+--delete: deletes files present at dest but not at source
+-P: shows progress
+-z: compress data while copy
+
+Eg:
+rsync source/* dest/ copy all files from source folder to dest
+rsync -zaP source/* username@ip:<directory> transfer files to remote server
+Note:
+the "/" is important to copy all contents of dir and not the dir

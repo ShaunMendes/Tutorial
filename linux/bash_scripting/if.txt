@@ -1,0 +1,22 @@
+if [ <some test> ]
+then
+<commands>
+elif [ <some test> ] 
+then
+<different commands>
+else
+<other commands>
+fi
+
+
+Eg:
+if [ $1 -gt 100 ]
+then
+echo Hey that\'s a large number.
+pwd
+fi
+
+if [ -r $1 ] && [ -s $1 ]
+then
+echo This file is useful.
+fi

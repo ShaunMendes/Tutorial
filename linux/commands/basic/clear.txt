@@ -1,0 +1,2 @@
+command: clear
+clear terminal

@@ -1,0 +1,21 @@
+command: grep <option> <search_string/regex> <filename>
+print lines with matching patterns
+
+options:
+-w: only find perfect match
+-i: case insensitive search
+-n: return line number
+-B: get lines before match
+-A: get lines after match
+-C: get lines before and after match
+-r: recursive search
+-l: return files with a match
+-c: no of matches in each file
+-P: to use regex
+
+Eg:
+grep -w "John Williams" names.txt return lines containing the string John Williams
+grep -w -B 4 "John Williams" names.txt return lines containing the string John Williams and 4 lines before each match
+grep -wni "John Williams" ./* searches for text in each file
+history | grep "git commit" from history of commands get all commands containing git commit
+grep -P "...-...-...." names.txt search for pattern matches in file

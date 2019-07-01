@@ -1,0 +1,2 @@
+command: chown <user/group_name>
+change permissions of file/folder
