@@ -1,6 +1,0 @@
-command: cp <options> <file/folder_path> <new_file/folder_path>
-copy files to location
-note: file path with file name
-
-options:
--R: recursive copy

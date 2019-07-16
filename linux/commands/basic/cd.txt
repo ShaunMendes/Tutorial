@@ -1,2 +1,0 @@
-command: cd <dir_path>
-change directory

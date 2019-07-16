@@ -1,2 +1,0 @@
-command: chown <permission> <folder/file_path>
-change permissions of file/folder

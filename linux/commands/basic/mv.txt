@@ -1,3 +1,0 @@
-command: mv <file/folder_path> <new_file/folder_path>
-move/rename file from one dir to another
-note: file path with file name

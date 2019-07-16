@@ -1,2 +1,0 @@
-command: history
-get history of all commands executed on terminal
