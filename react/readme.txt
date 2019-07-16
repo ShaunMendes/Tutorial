@@ -18,3 +18,21 @@ to view another page, another component is rendered in the same html page. This 
 get response from server.
 
 condition ? True : False
+
+LifeCycle Hooks:https://www.youtube.com/watch?v=iYz2OKWO09U&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG&index=22
+Mounting
+Updating
+UnMounting
+
+
+React Router:
+Link allows page to load without request from server(Refresh)
+NavLink allows page to load without request from server(Refresh) and adds a class of active
+
+Props:
+They are used to carry data between different components
+They also contain route information
+
+redux:
+Centeral Store
+Used for state management
