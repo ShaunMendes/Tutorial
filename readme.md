@@ -1,26 +1,27 @@
-***REACT REPO***:
+##REACT REPO:
 
 *Using CDN*
 
-___Tut1__:
+__Tut1__:
 
-*State
-*Events
+* State
+* Events
 
 __Tut2__:
-*forms
+
+* forms
 
 *Using CLI*
 
 __myapp/todoapp__:
 
-*Class Based Components
-*Function Based Components
-*LifeCycle Hooks
+* Class Based Components
+* Function Based Components
+* LifeCycle Hooks
 
 __poketimes__:
 
-*Router
-*Higher order components
-*Images
-*Redux
+* Router
+* Higher order components
+* Images
+* Redux
