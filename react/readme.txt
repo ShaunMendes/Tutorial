@@ -88,3 +88,6 @@ Eg project: marioplan - SignUp Component
 
 7. In the "handleSubmit" function the signUp is called
 
+
+Context API:
+Share state with component tree
