@@ -91,3 +91,15 @@ Eg project: marioplan - SignUp Component
 
 Context API:
 Share state with component tree
+Used when we want to share state between multipe component
+Almost a easy replacement for Redux
+
+React Hooks:
+useState():
+    use state within functional components
+
+useEffect():
+    run code each time component renders
+
+useContext():
+    consumes context in functional components
