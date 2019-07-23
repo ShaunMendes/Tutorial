@@ -1,0 +1,2 @@
+contains all packages installed
+to install packages  using package.json use command "npm install" in dir where package.json is

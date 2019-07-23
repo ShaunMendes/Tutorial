@@ -1,0 +1,2 @@
+used to handle incoming post requests
+in post requests data in sent in the URL itself hence the api is used
