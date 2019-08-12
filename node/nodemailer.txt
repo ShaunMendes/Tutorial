@@ -1,1 +1,0 @@
-use to send mail from nodejs

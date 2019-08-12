@@ -1,2 +1,0 @@
-monitors changes made to any files in your application.
-Auto restarts servers on changes.
