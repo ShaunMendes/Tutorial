@@ -1,0 +1,2 @@
+To build the protocol buffer for python:
+python -m grpc_tools.protoc -I<path_to_proto_folder> --python_out=<output_path> --grpc_python_out=<output_path> <proto_file_path>
