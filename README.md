@@ -1,4 +1,4 @@
-# SCSS/SASS
+# Syntactically Awesome Style Sheets
 
 ## Variables
 
