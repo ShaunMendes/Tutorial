@@ -13,55 +13,55 @@ Eg:
  background-color:@deepgreen  
 }
 
-Can be used with selectors as well
-@my-selector : branner
-@{my-selector}:{
-width:100px;
+Can be used with selectors as well  
+@my-selector : branner  
+@{my-selector}:{  
+width:100px;  
 }
 
-Can also be used for css properties
-@property: color;
-.widget {
-@{property}: #0ee;
-background-@{property}: #999;
+Can also be used for css properties  
+@property: color;  
+.widget {  
+@{property}: #0ee;  
+background-@{property}: #999;  
 }
 
-Variables can also be declared after used(lazy evaludation)
-.lazy-eval {
-width: 9%;
+Variables can also be declared after used(lazy evaludation)  
+.lazy-eval {  
+width: 9%;  
 }
 
-Properties can also be used as variables
-.widget {
-color: #efefef;
-background-color: \$color;
+Properties can also be used as variables  
+.widget {  
+color: #efefef;  
+background-color: \$color;  
 }
 
 ## Parent Selectors
 
-Used to apply multiple events to parents
-a {
-color: blue;
-&:hover {
-color: green;
-}
+Used to apply multiple events to parents  
+a {  
+color: blue;  
+&:hover {  
+color: green;  
+}  
 }
 
 ## Extend
 
-Used to add one class selector on another
-nav ul {
-&:extend(.inline);
-background: blue;
-}
-.inline {
-color: red;
+Used to add one class selector on another  
+nav ul {  
+&:extend(.inline);  
+background: blue;  
+}  
+.inline {  
+color: red;  
 }
 
 ## Mixin
 
-Note: Reusable piece of code
-As much as possible use it with extends keyword to prevent duplication of code
+Note: Reusable piece of code  
+As much as possible use it with extends keyword to prevent duplication of code  
 Event selectors can be used as mixins
 
 Declaration
@@ -88,38 +88,38 @@ Declaration
    .grid(4, 2%)  
    }
 
-- type3:.&lt;mixin_name&gt;(@&lt;variable_name&gt;,@&lt;variable_name&gt;){@return &lt;css&gt;}
-  Eg:
-
-  .average(@x, @y) {
-  @result: ((@x + @y) / 2);
+- type3:.&lt;mixin_name&gt;(@&lt;variable_name&gt;,@&lt;variable_name&gt;){@return &lt;css&gt;}  
+  Eg:  
+  .average(@x, @y) {  
+  @result: ((@x + @y) / 2);  
   }
 
-- mixin guards:
-  .mixin(@a) when (lightness(@a) >= 50%) {
-  background-color: black;
-  }
-  .mixin(@a) when (lightness(@a) < 50%) {
-  background-color: white;
-  }
-  .mixin(@a) {
-  color: @a;
+- mixin guards:  
+  Conditional execution of mixins  
+  .mixin(@a) when (lightness(@a) >= 50%) {  
+  background-color: black;  
+  }  
+  .mixin(@a) when (lightness(@a) < 50%) {  
+  background-color: white;  
+  }  
+  .mixin(@a) {  
+  color: @a;  
   }
 
-- Aliasing
-  #theme.dark.navbar {
-  .colors(light) {
-  primary: purple;
-  }
-  .colors(dark) {
-  primary: black;
-  secondary: grey;
-  }
-  }
-  .navbar {
-  @colors: #theme.dark.navbar.colors(dark);
-  background: @colors[primary];
-  border: 1px solid @colors[secondary];
+- Aliasing  
+  #theme.dark.navbar {  
+  .colors(light) {  
+  primary: purple;  
+  }  
+  .colors(dark) {  
+  primary: black;  
+  secondary: grey;  
+  }  
+  }  
+  .navbar {  
+  @colors: #theme.dark.navbar.colors(dark);  
+  background: @colors[primary];  
+  border: 1px solid @colors[secondary];  
   }
 
 ## Imports
@@ -148,11 +148,11 @@ Link: <https://www.w3schools.com/cssref/css3_pr_mediaquery.asp>
 
 ## If Statement
 
-if ((condition), true_value, false_value)
+if ((condition), true_value, false_value)  
 Eg  
 @some: foo;
 
-div {
-margin: if((2 > 1), 0, 3px);
-color: if((iscolor(@some)), darken(@some, 10%), black);
+div {  
+margin: if((2 > 1), 0, 3px);  
+color: if((iscolor(@some)), darken(@some, 10%), black);  
 }
