@@ -30,20 +30,22 @@ Declaration
   }
 
 - type2: @mixin &lt;variable_name&gt;($&lt;variable_name&gt;,$&lt;variable_name&gt;){&lt;css&gt;}  
-  Eg  
-  @mixin grid($cols, $mrgn){  
-  margin-right:$mrgn  
+   Eg  
+   @mixin grid($cols, $mrgn){  
+   margin-right:$mrgn  
 margin-left:$mrgn  
-  width:((100% - (($cols-1)*$mrgn))/$cols)  
+   width:((100% - (($cols-1)*$mrgn))/$cols)  
 &:nth-child(#{$cols}n){  
-  margin-right:0;  
-  }  
-  }  
-  .a{  
+   margin-right:0;  
+   }  
+   }  
+   .a{  
    @include grid(4, 2%)  
-  }
+   }
 
 ## Imports
+
+Warning: @import will be deprecated with @use because it helps in scoping and create private instances.
 
 @import "&lt;file_path_without_ext&gt;"
 
