@@ -2,7 +2,7 @@
 
 ## Variables
 
-\$&lt;variable_name&gt;:&lt;value&gt
+\$&lt;variable_name&gt;:&lt;value&gt;
 
 Eg:  
 \$deepgreen : green
