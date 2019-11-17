@@ -1,6 +1,6 @@
 body {
   background: lightblue;
-  text-align: center
+  text-align: center;
 }
 
 .wrapper {
@@ -21,7 +21,7 @@ body {
 
 .circle:hover {
   background: salmon;
-  transform: rotate(360deg)
+  transform: rotate(360deg);
 }
 
 /* img {
