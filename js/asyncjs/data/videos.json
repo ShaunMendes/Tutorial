@@ -1,9 +1,0 @@
-{
-    "videos": [{
-            "title": "hello world"
-        },
-        {
-            "title": "callback hell"
-        }
-    ]
-}
