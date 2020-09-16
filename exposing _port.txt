@@ -1,0 +1,2 @@
+nc -lp 45678 | nc -lp 45679
+The above command sends information to process running on port 45678 and send it to process on port 45679

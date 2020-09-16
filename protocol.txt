@@ -1,0 +1,10 @@
+docker run --rm -ti -p <i/p port>:<o/p port> --name <random_name> <image_name> <command> - connect the container to the host machine
+eg:docker run --rm -ti -p 45678:45678 -p 45679:45679 --name echo-server ubuntu:14.04 bash
+eg: exposing_port.png
+
+docker run --rm -ti -p <i/p port> --name <random_name> <image_name> <command> - connect the container to the host machine without specifying output port
+docker port <container_name> - gives names of dynamically allocated ports on host machine
+eg: dynamic_port.png
+
+docker run -p <o/p port>:<i/p port>/(tcp/udp) - assigns port type specifed in bracket
+eg: udp.png

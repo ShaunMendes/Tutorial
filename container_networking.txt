@@ -1,0 +1,4 @@
+docker network ls - list available networks
+docker network create <network_name> - create a virtual network to connect containers
+docker run --rm -ti --net <network_name> <container_name> <command> - to connect container over networks
+docker network connect <network_name1> <network_name2> - create a connection bridge between 2 networks

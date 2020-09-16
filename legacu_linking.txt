@@ -1,0 +1,2 @@
+- Link all ports only 1 way
+- Secret env variables are shared only 1 way

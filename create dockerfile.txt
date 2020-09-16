@@ -1,0 +1,14 @@
+Each line is a seperate image that gets killed once line execution is complete
+FROM statement must always be 1st statement, mentions which image to run
+Always add author
+syntax: MAINTAINER Firstname Lastname <email>
+RUN executes line and saves output
+ADD adds files to image uncompressed
+ENV sets env variables
+ENTRYPOINT specifies start of command, anything after this is arguments to that command
+CMD specifies whole command
+ENTRYPOINT CMD can be used together
+EXPOSE exposes ports to host
+VOLUME defines shared or emphemeral folders
+WORKDIR sets directory of container to start in
+USER sets which user the container will run as

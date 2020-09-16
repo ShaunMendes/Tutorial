@@ -1,0 +1,8 @@
+place where docker stores all the images
+one can create their own registry for local purposes
+
+docker search <image_name> - gives list of available images with tags
+docker login - to login into your docker
+docker pull <image_name>  pulls image from registry
+docker tag <image_name> <docker_id>/<new_image_name>:<version> - to create a new image from an existing one 
+docker push <docker_id>/<new_image_name>:<version> push image to registry
