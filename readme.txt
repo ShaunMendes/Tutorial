@@ -26,6 +26,7 @@ docker rm <container_name> - deletes all data of container
 docker run  --memory <integer> <image_name> <command>
 docker run --cpu-share - give equal cpu to all running dockers
 docker run --cpu-quota - assign % of cpu to dedicate to the container at given time
+docker inspect <container_name> - to get the root process
 
 
 Notes:
