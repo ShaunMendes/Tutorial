@@ -1,0 +1,3 @@
+Single machine coordination
+Designed for testing and developement
+Brings up all volumnes, containers, etc at one time

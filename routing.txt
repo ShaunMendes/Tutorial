@@ -1,0 +1,6 @@
+creates "firewall" rules to move packets between networks
+docker run -ti --rm --net=host --privileged=true ubuntu bash - starts up ubuntu with access to host networks
+docker run -ti --rm -p 8080:8080 ubuntu bash connect 8080 of host to 8080 of container
+
+to check available ports we use:
+iptables -n -L -t nat

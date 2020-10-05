@@ -1,0 +1,18 @@
+Terminology:
+
+Ethernet: moves "frames" on a wire
+IP layer: moves packets on a local network
+Routing: forwards packets between networks
+Ports: Addresses particular programs on a computer
+
+Docker users bridges to create virtual networks in computers
+
+Commands:
+docker run -ti --rm --net=host ubuntu:16.0 bash - by setting net=host, allows docker to setup connection with host machine
+apt-get update && apt-get install bridge-utils - install bridge package
+brctl show - gives list of all available bridges
+on another terminal create a new network:
+docker network create <random_name>
+again run: brctl show
+Eg: bridge.png
+

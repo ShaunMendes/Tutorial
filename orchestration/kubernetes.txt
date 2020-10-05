@@ -1,0 +1,4 @@
+containers run programs 
+pods group containers together
+services make pods available to each other
+Very flexible overlay networking
