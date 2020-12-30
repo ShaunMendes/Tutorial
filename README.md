@@ -43,3 +43,6 @@ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git #to change 
 git push &lt;reponame&gt; &lt;branchname&gt; to push your project to remote repo
 
 git pull &lt;aliasname&gt;/&lt;reponame&gt; &lt;branchname&gt; to pull changes from the remote repo
+
+git remote -v shows the remote branch url
+git remote set-url origin &lt;git-url&gt; to change the remote named "origin" url
