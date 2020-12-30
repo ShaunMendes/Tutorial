@@ -1,6 +1,8 @@
 auxillary:
 <container_name> = Name obtianed from running "docker ps"
 
+docker login --username=<uname> #to login into dockerhub
+
 docker info - get info about currently running docker instance
 docker image - list all containers
 docker run <image_name> - run docker image

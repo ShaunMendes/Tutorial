@@ -4,5 +4,5 @@ Ephemeral - Data will be lost after container has been exited
 
 docker run -ti -v <host_folder_path>:/<virtual_folder> <image_name> <command> - connect to shared folde on host
 
-docker run --rm -ti -v /<cirtual_folder> <image_name> <command> - create shared folder in container
+docker run --rm -ti -v /<virtual_folder> <image_name> <command> - create shared folder in container
 docker run -ti --volumes-from <container_name> <image_name> <command> - connect to another container's shared directory
