@@ -1,4 +1,0 @@
-repo: https://github.com/ShaunMendes/github-actions-demo-template.git
-
-important resource:
-https://lab.github.com/
