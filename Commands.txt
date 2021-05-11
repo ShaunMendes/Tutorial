@@ -1,0 +1,225 @@
+username:m001-student
+password:m001-mongodb-basics
+
+Equations
+	{"<field1>":"<value1>","<field2>":"<value2>",...} --(1)
+	{"<operator1>":(1),"<operator2>":(1),...} --(2) 
+
+Notes
+	Operators need not always be in quotes
+	-1 indicates higest values when used in comparison
+
+DO NOT TOUCH FOLLOWING DBs:
+admin
+config
+local
+
+$ Symbol
+	denots the use of operator
+	address the field value when used with field name
+	
+Connect to remote mongodb
+	mongo "mongodb+srv://<your_username>:<your_password>@<your_cluster>.mongodb.net/<database>" --username <your_username>
+
+Dump records in BSON
+	mongodump --uri "mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/<database>"
+
+Dump records in JSON and specify collection
+	mongoexport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/<database>" --collection=sales --out=sales.json
+
+Import records from BSON
+	mongorestore --uri "mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/<database>"  --drop dump
+
+Import records from JSON
+	mongoimport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/<database>" --drop sales.json
+
+Database
+	See all
+		show dbs
+
+	Select
+		use <database>
+	
+Collections
+
+	See all
+		show collections
+		
+	View data
+		db.<collection>.find((1))
+		db.<collection>.findOne((1)) -- returns single result
+		db.zip.find({"state":"NY"})
+		
+	View certain fields
+		db.<collection>.find({<query>}, {(1)})
+		value can be either 0 or 1
+		1 indicates that field is to be included
+		0 indicates that field is not to be included
+		Note
+			The _id field is added by default
+			
+	Sort and limit results
+		db.<collection>.find({<query>}).sort((1)).limit(<value>)
+		value 1 indicates ascending
+		value 2 indicates descending
+		Note
+			When sort and limit are used together mongo always sorts 1st regardless of order
+			
+		db.zips.find().sort({ "pop": 1, "city": -1 }).limit(10) - sort by pop asc and city desc limit 10 
+		
+	count
+		db.<collection>.find().count() --without condition
+		db.<collection>.find((1)).count() --with condition
+		
+		db.zip.find({"state":"NY"}).count()
+		
+	format view
+		db.<collection>.find().pretty() --without condition
+		db.<collection>.find(<query>).pretty() --with condition
+		
+		db.zip.find({"state":"NY"}).pretty()
+	
+	add document
+		db.<collection>.insert((1))
+		db.<collection>.insert([(1),(1),...]) - insert multiple
+		db.<collection>.insert([(1),(1),...], {"ordered":false}) - insert in any order
+		Note
+			If the collection/db name is misspelt or not present, then mongo will create a new collection/db and insert data into it without throwing errors
+			If at any point cursor finds a duplicate _id, then the program will throw errors
+			If at any point cursor finds a duplicate _id and ordered is false, then the program will enter all unique records and skip duplicates
+			  
+	update document
+		db.<collection>.updateOne(<query>,(2)) - update one documents with (2) that satisfy condition specified by (1)
+		db.<collection>.updateMany(<query>,(2)) - update multiple documents with (2) that satisfy condition specified by (1)
+		db.<collection>.update(<query>,(2)) - update multiple documents with (2) that satisfy condition specified by (1)
+		db.<collection>.upsert(<query>,(2),{"upsert": true}) - Insert document if query condition not met
+		
+		db.zips.updateMany({"city":"HUDSON"},{"$inc":{"pop": 10}}) -- for all documents with city as HUDSON, increment pop value by 10
+	
+	delete document
+		db.<collection>.dropOne((1))
+		db.<collection>.dropMany((1))		
+	
+	delete collection
+		db.<collection>.drop()
+		
+Operators(https://docs.mongodb.com/manual/reference/operator/)
+	
+	Update
+		$set, $unset
+		
+	Query
+		$lt, $gt, $gte,etc
+		Format
+			{"<field>": {<operator>:<value>}}
+		Note
+			If operator is not specified equals($eq) is used as default
+			
+		db.zips.find({"pop":{$lt: 1000}})
+		
+	Logical
+		$and - If all conditions are satisfied
+		$or - If at least one of the conditions are satisfied
+		$nor - Fail to match both conditions
+		$not - negates the condition
+		Format
+			{<operator>:[(1)/(2),(1)/(2),...]}
+		Note
+			If operator is not specified $and is used as default
+			
+		db.grades.find({$and:[{"student_id": {$gt: 25}}, {"student_id": {$lt: 100}}]})
+		db.grades.find({$student_id:{$gt: 25, $lt: 100}}) -- Simplified as $and is default operator and student_id is common column
+		db.companies.find({ "$and": [
+                        { "$or": [ { "founded_year": 2004 },
+                                   { "founded_month": 10 } ] },
+                        { "$or": [ { "category_code": "web" },
+                                   { "category_code": "social" }]}]}).count()
+								   
+	Expressive($expr)
+		Format
+			{$expr:{<query_operator1>:[$<field>, <value>]}}
+			{$expr:{<logical_operator>:[{<query_operator1>:[$<field_name>, $<field_name>/<value>]},...}]}
+		db.trips.find({$expr:{$eq: ["$start station name", "$end station name"]}}) - find all records that have same start station name and end station name
+		db.trips.find({$expr:{
+							$and: [
+									{$gt:["$tripduration", 1200]},
+									{$eq: ["$start station name", "$end station name"]}
+								]
+							}
+					}) - find all records that have same start station name and end station name and trip duration was greater than 1200
+					
+	Array
+		$push - adds element to array
+		$push - Turns field into an array if was prev different type
+		$all - At least one element in array
+		$size - check size of array
+		
+		Format
+			{<field>:{<operator>:<value>}}
+			{<field>:{$all:<array>}}
+			
+		db.listingsAndReviews.find({$and:[
+                                    {"property_type":"House"},
+                                    {"amenities":{$all: ["Changing table"]}}
+                                   ]
+                           })
+			
+	Array of JSON
+		Format
+			{<field>:{$elemMatch:(1)}}
+		
+		db.companies.find({"offices":{$elemMatch:{"city":"Seattle"}}}).count()
+		
+	Subdocument
+		Format
+			{<field>.<sub_field>:<value>}
+			{<field>.<array_element_number>.<sub_field>.<sub_field>....:<value>/(2)}
+			
+		db.trips.find({"start station location.coordinates.0":{$lt: -74}})
+		
+Aggregation Framwork
+db.listingsAndReviews.find({"amenities":"Wifi"})
+Translated into aggregation framework
+	db.listingsAndReviews.find([
+								{$match: {"amenities":"Wifi"}},
+								{$project: {"price":1, "address":1, "_id":0}}
+							])
+In the aggregation framework the order of operations matter. Works like a pipeline that iterate in order of list.
+
+	$group
+		Format 
+			{$group:
+				{
+				_id: <expression>, // Group By Expression
+				<field1>: { <accumulator1> : <expression1> },
+				...
+				}
+			}
+		
+		db.listingsAndReviews.aggregate([
+									{$project: {"address":1, "_id":0}},
+									{$group:
+											{_id:"$address.country"}
+									}
+								]) - unique list of countries
+		db.listingsAndReviews.aggregate([
+											{$project: {"address":1, "_id":0}},
+											{$group:
+													{_id:"$address.country","count":{$sum:1}}
+											}
+										]) - group by country and get record count
+										
+Indexing:
+Useful when a certain column or set of columns are queried regularly
+Column does not need to have all values unique
+
+Format
+	db.<collection>.createIndex((1))
+	value can be 1 or -1 for ascending and descending respectively
+	
+Data Modeling - https://docs.mongodb.com/manual/core/data-modeling-introduction/
+Thumb rule - Data that is used together should be stored together
+
+Atlas UI - https://bit.ly/3vYhYqa
+
+Mongo Compass - https://bit.ly/3uDHD76
