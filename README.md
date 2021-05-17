@@ -1,5 +1,13 @@
 # Tutorial
 
-Css
-Git
+css
+git
 js
+mongo
+docker
+python
+less
+scss
+grpc
+node
+linux
