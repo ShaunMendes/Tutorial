@@ -1,0 +1,46 @@
+scrapy startproject <name>
+scrapy shell "<url>"
+
+For .css
+	"<space>" between 2 tag names 
+		response.css("li a")
+	. for class
+		response.css("span.text")
+	# for id
+		response.css("div#dsa213j324")
+	::text to extract text
+		response.css("span.text::text")
+for .xpath
+	// for HTML tag
+		response.xpath("//title")
+	@ for specific HTML property
+		response.xpath("@href")
+	[@class=""] for specific class
+		response.xpath("//span[@class='text']")
+	/text() to extract only text
+		response.xpath("//title/text()")
+
+The css and xpath functions can be cascaded together as well
+	response.xpath("//span[@class='text']/text()").extract()
+	
+After the crawler is defined in the spider folder:
+scrapy crawl <spider> 
+scrapy crawl <spider> -o <name>.json -- to write output to json
+scrapy crawl <spider> -o <name>.csv -- to write output to excel
+scrapy crawl <spider> -o <name>.xml -- to write output to xml
+
+The output structure of each spyder is defined in items.py file
+
+Working of scrapy
+When we issue the crawl command the flow goes as
+spider.py -> items.py -> pipeline.py
+
+To autocreate a spider
+	scrapy genspider <spider> <url>
+	
+User agent allows us to bypass restrictions put on the webcrawler by making the website think browser is crawling the website and not the crawler application
+use pip install scrapy-user-agents and insert the middleware mentioned in documentation
+
+Proxies help us mask our IP address and inherit another IP address to bypass several restrictions
+pip install scrapy_proxy_pool and insert the middleware mentioned in documentation
+Google search "free proxy list" to get proxies.
